@@ -79,7 +79,7 @@ public class MyManage {
         ContentValues contentValues = new ContentValues();
         contentValues.put(column_name, strName);
         contentValues.put(column_Surname,strSurname);
-        contentValues.put(column_User,strPassword);
+        contentValues.put(column_User,strUser);
         contentValues.put(column_Password,strPassword);
 
         return writeSqLiteDatabase.insert(user_table,null,contentValues);
