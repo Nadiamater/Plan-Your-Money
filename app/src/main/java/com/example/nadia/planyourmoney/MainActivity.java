@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
         //test add value
         //testAddValue();
 
-        Object testAddValue;
-        testAddValue();
+
     }   // main method
 
 
