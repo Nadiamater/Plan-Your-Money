@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Plan Your Money</string>
+
+
+    <string name="regis">สมัครสมาชิก</string>
+    <string name="name">ชื่อ:</string>
+    <string name="Surname">นามสกุล:</string>
+    <string name="User">User:</string>
+    <string name="password">Password:</string>
+    <string name="login">LOGIN</string>
+
 </resources>
