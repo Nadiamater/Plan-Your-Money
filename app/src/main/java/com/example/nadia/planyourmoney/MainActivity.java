@@ -63,7 +63,33 @@ public class MainActivity extends AppCompatActivity {
     private void checkAuthen() {
 
         //Read data from userTABLE
+        SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                MODE_PRIVATE, null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM  " + MyManage.user_table, null);
+        cursor.moveToFirst();
+        String[] resultStrings = new String[cursor.getColumnCount()];
+        for (int i = 0; i < cursor.getColumnCount(); i++) {
+            resultStrings[i] = cursor.getString(i);
+        }   //for
+        cursor.close();
 
+
+        //check user
+        if (!userString.equals(resultStrings[3])) {
+            myAlert("User ผิดกรอกใหม่");
+        }   else if (passwordString.equals(resultStrings[4])) {
+            //Intent to hub
+            Intent intent = new Intent(MainActivity.this,HubActivity.class);
+            intent.putExtra("Name", resultStrings[1]);
+            intent.putExtra("Surname", resultStrings[2]);
+            startActivity(intent);
+            finish();
+
+
+        }   else{
+            myAlert("Password ผิดกรอกใหม่");
+
+        }
 
     }       //checkauthen
 
