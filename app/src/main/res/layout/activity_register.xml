@@ -27,7 +27,8 @@
         android:layout_alignParentBottom="true"
         android:textColor="#0d0d0d"
         android:textStyle="bold"
-        android:background="#b9b5b4" />
+        android:background="#b9b5b4"
+        android:onClick="clickRegister" />
 
     <LinearLayout
         android:orientation="vertical"
